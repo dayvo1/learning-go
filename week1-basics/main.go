@@ -3,6 +3,11 @@ package main
 import "fmt"
 
 func main() {
+	backendJourney()
+	// guessingGame()
+}
+
+func backendJourney() {
 	fmt.Println("Starting my backend journey!")
 
 	name := "David" // := is type inference (like auto in C++)
