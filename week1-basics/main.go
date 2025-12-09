@@ -1,18 +1,15 @@
 package main
 
+import (
+	"fmt"
+	"net/http"
+)
+
 func main() {
-	//backendJourney()
-	//guessingGame()
-	//calculator()
+	http.HandleFunc("/", helloHandler)
+	http.HandleFunc("/about", aboutHandler)
 
-	student := Student{
-		Name: "Test Name",
-		Id:   "12345",
-		Gpa:  3.5,
-	}
-
-	student.Display()
-	student.UpdateGpa(4.0)
-	student.Display()
+	fmt.Println("Server starting on http://localhost:8080")
+	http.ListenAndServe(":8080", nil)
 
 }
